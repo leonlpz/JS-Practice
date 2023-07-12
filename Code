@@ -1,0 +1,37 @@
+// codigo usando el siguiente algoritmo: 
+/*Recibe un array de números (de cualquier cantidad).
+Crea una variable “máxima” que inicie en 0.
+*Recorre el array valor por valor.
+*Pregunta si el valor de la variable máxima es mayor que el valor del número en la posición actual del array.
+*Si la condición anterior es verdadera, asigna el valor de la posición actual del array a la variable máxima.
+*Imprime el número más grande del array.*/
+
+function encontrarNumeroMasGrande(lista) {
+  let maximo = 0;
+
+  for (let i = 0; i < lista.length; i++) {
+    if (maximo < lista[i]) {
+      maximo = lista[i];
+    }
+  }
+
+  return maximo;
+}
+
+// Ejemplo de uso:
+const numeros = [10, 5, 20, 8, 15];
+const numeroMasGrande = encontrarNumeroMasGrande(numeros);
+console.log("El número más grande es:", numeroMasGrande);
+
+// --------------------------------------------------------------------
+
+// codigo usando la funcion Math.max
+
+function encontrarNumerosMasGrande(lista) {
+  return Math.max(...lista);
+}
+
+// Ejemplo de uso:
+const numeross = [100, 50, 200, 80, 150];
+const numeroMassGrande = encontrarNumerosMasGrande(numeross);
+console.log("El número más grande es:", numeroMassGrande);
